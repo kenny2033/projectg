@@ -1,70 +1,171 @@
-# Getting Started with Create React App
+# Kenny's React Arcade - ProjectG
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+![Project Banner](https://via.placeholder.com/1200x400?text=Kenny's+React+Arcade+Banner)
 
-## Available Scripts
+**A portfolio of interactive React applications by Kalisa Ndoli Kenny**
 
-In the project directory, you can run:
+## Project Overview
 
-### `npm start`
+Kenny's React Arcade is a collection of three engaging applications built with React that demonstrate modern web development techniques. This project showcases a responsive design, efficient state management, and a polished user experience with full dark mode support.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Features
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### 🎲 Tenzi Game
 
-### `npm test`
+- Roll dice until all show the same value
+- Click to freeze dice between rolls
+- Win detection with celebration
+- Smooth animations and responsive design
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### 📝 Notes App
 
-### `npm run build`
+- Create, edit, and delete notes
+- Automatic saving to local storage
+- Date tracking for each note
+- Clean card-based interface
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### ❓ Quiz App
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- Multiple-choice questions with selection
+- Score calculation and results display
+- Correct answer highlighting
+- Play again functionality
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### ✨ Additional Features
 
-### `npm run eject`
+- **Full-Screen Dark Mode** toggle across all apps
+- Smooth transitions between themes
+- Consistent UI design throughout
+- Responsive layout for all devices
+- User preference saved in localStorage
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Technologies Used
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- React 18
+- React Router 6
+- Context API for state management
+- CSS3 with custom properties
+- LocalStorage for data persistence
+- JavaScript ES6+
+- Vercel for deployment
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Installation Guide
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### Prerequisites
 
-## Learn More
+- Node.js (v16+ recommended)
+- npm (v8+ recommended)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### Setup Instructions
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+1. Clone the repository:
 
-### Code Splitting
+```bash
+git clone https://github.com/kenny2033/projectg.git
+cd projectg
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+2. Install dependencies:
 
-### Analyzing the Bundle Size
+```bash
+npm install
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+3. Start the development server:
 
-### Making a Progressive Web App
+```bash
+npm start
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+4. Open your browser and visit:
 
-### Advanced Configuration
+```
+http://localhost:3000
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## Project Structure
 
-### Deployment
+```
+src/
+├── components/
+│   ├── Home.js              # Home page with app navigation
+│   ├── TenziGame.js         # Tenzi game logic and UI
+│   ├── Die.js               # Individual die component
+│   ├── NotesApp.js          # Notes application
+│   ├── Note.js              # Individual note component
+│   ├── QuizApp.js           # Quiz application
+│   └── Question.js          # Quiz question component
+├── context/
+│   └── DarkModeContext.js   # Dark/light mode context
+├── App.js                   # Main application component
+├── index.js                 # Entry point
+└── App.css                  # Global styles
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+## How to Use
 
-### `npm run build` fails to minify
+1. **Home Page**:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+   - Click on any of the three app buttons to navigate
+   - Toggle between dark/light mode using the button in the top-right corner
+
+2. **Tenzi Game**:
+
+   - Click "Roll" to roll unfrozen dice
+   - Click individual dice to freeze/unfreeze them
+   - Win when all dice show the same value
+   - Click "New Game" to start over
+
+3. **Notes App**:
+
+   - Type your note in the text area
+   - Click "Add Note" to save
+   - Click "Delete" on any note to remove it
+   - Notes are automatically saved to your browser
+
+4. **Quiz App**:
+   - Click "Start Quiz" to begin
+   - Select an answer for each question
+   - Click "Check Answers" to see your score
+   - Click "Play Again" to restart the quiz
+
+## Live Demo
+
+Experience the application live:  
+[projectg-kalisa.vercel.app](https://projectg-kalisa.vercel.app)
+
+## Technical Highlights
+
+- **Theme Management**: Implemented a context-based dark/light mode system with localStorage persistence
+- **Game Logic**: Developed custom dice rolling and win detection algorithms
+- **Responsive Design**: Mobile-first approach with flexible layouts
+- **Performance Optimization**: Efficient state management with React hooks
+- **User Experience**: Smooth transitions and intuitive interfaces
+
+## Screenshots
+
+| Home Page                                                        | Tenzi Game                                                         | Notes App                                                        |
+| ---------------------------------------------------------------- | ------------------------------------------------------------------ | ---------------------------------------------------------------- |
+| ![Home Page](https://via.placeholder.com/300x200?text=Home+Page) | ![Tenzi Game](https://via.placeholder.com/300x200?text=Tenzi+Game) | ![Notes App](https://via.placeholder.com/300x200?text=Notes+App) |
+
+| Quiz Start                                                         | Quiz Questions                                                             | Quiz Results                                                           |
+| ------------------------------------------------------------------ | -------------------------------------------------------------------------- | ---------------------------------------------------------------------- |
+| ![Quiz Start](https://via.placeholder.com/300x200?text=Quiz+Start) | ![Quiz Questions](https://via.placeholder.com/300x200?text=Quiz+Questions) | ![Quiz Results](https://via.placeholder.com/300x200?text=Quiz+Results) |
+
+## Future Improvements
+
+- Add user authentication system
+- Implement cloud sync for notes
+- Add difficulty levels to Tenzi game
+- Integrate with external quiz API for dynamic questions
+- Add animations and micro-interactions
+- Implement PWA features for offline use
+- Add score tracking and leaderboards
+
+## About the Developer
+
+**Kalisa Ndoli Kenny** is a passionate software developer specializing in React, JavaScript, and modern web technologies. With a focus on clean code and intuitive user experiences, Kenny builds applications that solve real-world problems while providing engaging interfaces.
+
+---
+
+**Kenny's React Arcade** © 2025 Kalisa Ndoli Kenny. All rights reserved.
