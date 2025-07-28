@@ -3,7 +3,7 @@ import Die from "./Die";
 import { useDarkMode } from "../context/DarkModeContext";
 
 export default function TenziGame() {
-  const { darkMode } = useDarkMode();
+  const { toggleDarkMode } = useDarkMode();
   const [dice, setDice] = useState(allNewDice());
   const [tenzies, setTenzies] = useState(false);
 
@@ -58,10 +58,16 @@ export default function TenziGame() {
   ));
 
   return (
-    <div className={`tenzi-container ${darkMode ? "dark" : ""}`}>
+    <div className="tenzi-container">
+      <div className="mode-toggle">
+        <button onClick={toggleDarkMode}>Toggle Dark Mode</button>
+      </div>
+
       <h1>Tenzies</h1>
       <p>Roll until all dice are the same. Click each die to freeze it.</p>
+
       <div className="dice-container">{diceElements}</div>
+
       <button className="roll-btn" onClick={rollDice}>
         {tenzies ? "New Game" : "Roll"}
       </button>

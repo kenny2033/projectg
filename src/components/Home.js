@@ -3,17 +3,17 @@ import { Link } from "react-router-dom";
 import { useDarkMode } from "../context/DarkModeContext";
 
 export default function Home() {
-  const { darkMode, toggleDarkMode } = useDarkMode();
+  const { toggleDarkMode } = useDarkMode();
 
   return (
-    <div className={`home ${darkMode ? "dark" : ""}`}>
+    <div className="home">
       <div className="mode-toggle">
-        <button onClick={toggleDarkMode}>
-          {darkMode ? "🌞 Light Mode" : "🌙 Dark Mode"}
-        </button>
+        <button onClick={toggleDarkMode}>Toggle Dark Mode</button>
       </div>
 
-      <h1>Welcome !</h1>
+      <h1>Kenny's React Arcade</h1>
+      <p>Explore interactive React applications</p>
+
       <div className="app-buttons">
         <Link to="/tenzi">
           <button className="app-btn tenzi-btn">Play Tenzi Game</button>

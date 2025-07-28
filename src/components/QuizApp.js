@@ -3,7 +3,7 @@ import Question from "./Question";
 import { useDarkMode } from "../context/DarkModeContext";
 
 export default function QuizApp() {
-  const { darkMode } = useDarkMode();
+  const { toggleDarkMode } = useDarkMode();
   const [quizStarted, setQuizStarted] = useState(false);
   const [questions, setQuestions] = useState([]);
   const [score, setScore] = useState(0);
@@ -82,7 +82,11 @@ export default function QuizApp() {
   }
 
   return (
-    <div className={`quiz-container ${darkMode ? "dark" : ""}`}>
+    <div className="quiz-container">
+      <div className="mode-toggle">
+        <button onClick={toggleDarkMode}>Toggle Dark Mode</button>
+      </div>
+
       {!quizStarted ? (
         <div className="quiz-start">
           <h1>Quizzical</h1>

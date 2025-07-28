@@ -3,7 +3,7 @@ import Note from "./Note";
 import { useDarkMode } from "../context/DarkModeContext";
 
 export default function NotesApp() {
-  const { darkMode } = useDarkMode();
+  const { toggleDarkMode } = useDarkMode();
   const [notes, setNotes] = useState(
     JSON.parse(localStorage.getItem("notes")) || []
   );
@@ -32,8 +32,13 @@ export default function NotesApp() {
   }
 
   return (
-    <div className={`notes-container ${darkMode ? "dark" : ""}`}>
+    <div className="notes-container">
+      <div className="mode-toggle">
+        <button onClick={toggleDarkMode}>Toggle Dark Mode</button>
+      </div>
+
       <h1>Notes App</h1>
+
       <div className="note-input">
         <textarea
           value={currentNote}
@@ -42,6 +47,7 @@ export default function NotesApp() {
         />
         <button onClick={addNote}>Add Note</button>
       </div>
+
       <div className="notes-list">
         {notes.map((note) => (
           <Note key={note.id} note={note} deleteNote={deleteNote} />
