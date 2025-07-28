@@ -13,7 +13,7 @@ export default function Home() {
         </button>
       </div>
 
-      <h1>Welcome!</h1>
+      <h1>Welcome !</h1>
       <div className="app-buttons">
         <Link to="/tenzi">
           <button className="app-btn tenzi-btn">Play Tenzi Game</button>
